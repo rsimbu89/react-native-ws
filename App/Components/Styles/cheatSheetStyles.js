@@ -119,10 +119,11 @@ export default StyleSheet.create({
         ]
     },
     leftModalView: {
-        alignItems: "flex-start"
+        alignItems: "flex-start",
     },
     rightModalView: {
-        alignItems: "flex-end"
+        alignItems: "flex-end",
+        marginHorizontal: moderateVerticalScale(-280)
     }
 
 })

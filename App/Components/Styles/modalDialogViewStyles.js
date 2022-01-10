@@ -5,8 +5,9 @@ import { moderateVerticalScale } from '@utils/UIScaleUtils'
 export default StyleSheet.create({
   modalView: {
     flex: 1,
-    width : moderateVerticalScale(360),
-    height: moderateVerticalScale(640)
+    width : '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)'
   },
   modalContentView: {
     flex: 1,
@@ -14,8 +15,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     alignContent: 'center',
-    backgroundColor: Colors.rgb_151515,
-    opacity: 0.9,
     shadowColor: Colors.rgb_000000,
     shadowOffset: {
       width: 0,
@@ -26,24 +25,23 @@ export default StyleSheet.create({
     elevation: 5
   },
   numberPadContainer: {
-    flex: 0.6,
+    flex: 0.45,
     justifyContent: "flex-start",
     alignContent: 'flex-start',
     alignItems: 'center',
-    alignSelf: 'center',
+    alignSelf: 'center'
   },
   button: {
     padding: 100
   },
   closeView: {
-    flex: 0.2,
+    flex: 0.275,
     width: '100%',
     height: '100%',
     justifyContent: 'flex-end',
     alignItems: 'center'
   },
-  closeText: {
-    color: Colors.rgb_FFFFFF,
+  closeIconHolder: {
     marginHorizontal: moderateVerticalScale(1),
     marginVertical: moderateVerticalScale(35),
     width: moderateVerticalScale(45),
@@ -51,10 +49,8 @@ export default StyleSheet.create({
     backgroundColor: Colors.rgb_1C1C1C,
     borderColor: Colors.rgb_0A0A0A,
     borderWidth: moderateVerticalScale(0.5),
-    alignItems: 'flex-end',
-    alignSelf: 'flex-start',
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    lineHeight: moderateVerticalScale(45)
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-start'
   }
 });

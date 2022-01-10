@@ -1,9 +1,11 @@
 import React from 'react'
 
-import { Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
+
+import rightIcon from '../../assets/images/right.png'
 
 import styles from './Styles/numberSelectViewStyles'
-const inputs = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '0', 'i', 'C', '√'];
+const inputs = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '0', 'i', 'C', rightIcon];
 
 const NumberSelectView = (props) => {
     return (
@@ -13,12 +15,18 @@ const NumberSelectView = (props) => {
                     return (
                         <TouchableOpacity
                             key={index}
-                            style={[styles.button, { width: index == 12 || index == 13 ? '49.5%' : '33%' }]}
+                            style={(index == 12 || index == 13 ? styles.actionButton : styles.button)}
                             onPress={() => { }}
                         >
-                            <Text style={styles.buttonText}>
-                                {value}
-                            </Text>
+                            {
+                                index == 13 ?
+                                    <Image style={styles.imageView} source={rightIcon}>
+                                    </Image>
+                                    :
+                                    <Text style={styles.buttonText}>
+                                        {value}
+                                    </Text>
+                            }
                         </TouchableOpacity>
                     );
                 })}

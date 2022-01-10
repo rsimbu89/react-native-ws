@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Alert, Modal, Text, Pressable, View } from "react-native";
+import { Alert, Modal, Text, Pressable, View, Image } from "react-native";
 import { NumberSelectView } from "@components";
-
+import closeIcon from '../../assets/images/close_yellow.png'
 import styles from './Styles/modalDialogViewStyles'
 
 class ModalDialogView extends Component {
@@ -35,27 +35,27 @@ class ModalDialogView extends Component {
     const { modalVisible } = this.state;
     const { style } = this.props
     return (
-      <View style={[styles.modalView]}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          supportedOrientations={['landscape', 'landscape-left', 'landscape-right']}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-            this.setModalVisible(!modalVisible);
-          }}
-        >
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        supportedOrientations={['landscape', 'landscape-left', 'landscape-right']}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          this.setModalVisible(!modalVisible);
+        }}
+      >
+
+        <View style={[styles.modalView]}>
           <Pressable
             style={[styles.modalContentView, style]}
             onPress={() => this.setModalVisible(!modalVisible)}
           >
-            <Pressable
-              style={[styles.closeView]}
-              onPress={() => this.setModalVisible(!modalVisible)}
-            >
-              <Text style={styles.closeText}>X</Text>
-            </Pressable>
+            <View style={[styles.closeView]} >
+              <View style={styles.closeIconHolder}>
+                <Image source={closeIcon} ></Image>
+              </View>
+            </View>
             <View style={[styles.numberPadContainer, style.numberPad]}>
               <NumberSelectView />
             </View>
@@ -65,11 +65,10 @@ class ModalDialogView extends Component {
               onPress={() => this.setModalVisible(!modalVisible)}
             >
             </Pressable>
-
           </Pressable>
+        </View>
+      </Modal>
 
-        </Modal>
-      </View>
     );
   }
 }

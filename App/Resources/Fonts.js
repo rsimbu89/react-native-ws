@@ -10,6 +10,7 @@ const size = {
     s9: 9,
     s10: 10,
     s11: 11,
+    s13: 13,
     s16: 16
 }
 
@@ -25,6 +26,10 @@ const style = {
     regular_11: {
         fontFamily: family.normal,
         fontSize: size.s11
+    },
+    regular_13: {
+        fontFamily: family.normal,
+        fontSize: size.s13
     },
     regular_16: {
         fontFamily: family.normal,
