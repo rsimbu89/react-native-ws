@@ -1,0 +1,6 @@
+module Pods_cheatSheet {
+  umbrella header "Pods-cheatSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}

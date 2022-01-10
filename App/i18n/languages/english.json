@@ -1,0 +1,23 @@
+{
+    "app" : {
+        "app_name" : "Cheat Sheet"
+    },
+    "generic_error": {
+        "title": "Unknown error"
+    },
+    "cheatSheet" : {
+
+    },
+    "infoView" : {
+        "hcp" : "HCP",
+        "pattern" : "Pattern",
+        "Player" : "Player"
+    },
+
+    "compass" : {
+        "e" : "E",
+        "n" : "N",
+        "s" : "S",
+        "w" : "W"
+    }
+}
